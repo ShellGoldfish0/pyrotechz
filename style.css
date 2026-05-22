@@ -200,3 +200,56 @@ footer p {
     color: #777;
     font-size: 0.9rem;
 }
+
+/* --- Responsive Design / Mobile Adjustments --- */
+@media (max-width: 768px) {
+    /* Stack the header, logo, and navigation vertically */
+    header {
+        flex-direction: column;
+        padding: 15px 20px;
+        text-align: center;
+    }
+
+    .logo-container {
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+
+    .logo-container img {
+        margin-right: 0;
+        margin-bottom: 10px;
+        height: 60px; /* Scales down the logo slightly */
+    }
+
+    /* Allows navigation links to wrap to a new line instead of running off screen */
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* Shrink the massive hero text so it fits */
+    #home {
+        padding: 50px 20px;
+    }
+
+    #home h2 {
+        font-size: 2.2rem; 
+    }
+
+    /* Force grids to become a single, neat column */
+    .locations-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Allow the contact box to shrink to fit smaller phone screens */
+    .contact-info {
+        min-width: 100%;
+        padding: 20px;
+    }
+
+    /* Reduce bulkiness of the content boxes */
+    .content-box {
+        padding: 25px 20px; 
+    }
+}
